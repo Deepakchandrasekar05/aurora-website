@@ -1,18 +1,23 @@
-import { Routes, Route } from "react-router-dom"; 
-import "./App.css";
-import Home from "./pages/home.jsx";
-import Team from "./pages/team.jsx";
-import Competition from "./pages/competition.jsx";
-import Sponsorship from "./pages/sponsership.jsx";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Home from './pages/Home';
+import Team from './pages/Team';
+import Challenges from './pages/Challenges';
+import Sponsors from './pages/Sponsors';
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/team" element={<Team />} />
-      <Route path="/competition" element={<Competition />} />
-      <Route path="/sponsorship" element={<Sponsorship />} />
-    </Routes>
+    <Router>
+      <div className="min-h-screen bg-black">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/team" element={<Team />} />
+          <Route path="/challenges" element={<Challenges />} />
+          <Route path="/sponsors" element={<Sponsors />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
