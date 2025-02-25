@@ -1,39 +1,40 @@
-import { motion } from 'framer-motion';
-import { ChevronDown } from 'lucide-react';
+import { motion } from "framer-motion";
+import { ChevronDown } from "lucide-react";
+import bg from "../assets/home_img.png";
 
 function Home() {
   return (
     <div className="relative">
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center">
+      <section className="relative h-screen flex items-center justify-start">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1614728263952-84ea256f9679?auto=format&fit=crop&q=80"
-            alt="Mars Rover"
+            src={bg}
+            alt="Space Background"
             className="w-full h-full object-cover opacity-40"
           />
         </div>
-        
-        <div className="relative z-10 text-center px-4">
-          <motion.h1 
+
+        <div className="relative z-10 text-left px-4 max-w-3xl pl-20 ml-[300px]">
+          <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-6xl md:text-7xl font-bold mb-6 gradient-text"
+            className="text-6xl md:text-7xl font-light mb-6"
           >
-            Team AURORA
+            Team Aurora
           </motion.h1>
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto"
+            className="text-xl md:text-2xl text-gray-300 max-w-xl"
           >
             Pushing the boundaries of rover technology and exploration
           </motion.p>
         </div>
 
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 1 }}
@@ -46,7 +47,7 @@ function Home() {
       {/* Mission Section */}
       <section className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -54,12 +55,16 @@ function Home() {
             className="grid md:grid-cols-2 gap-12 items-center"
           >
             <div>
-              <h2 className="text-4xl font-bold mb-6 gradient-text">Our Mission</h2>
+              <h2 className="text-4xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-[rgba(171,132,98,1)] to-white">
+                Our Mission
+              </h2>
+
               <p className="text-gray-300 text-lg leading-relaxed">
-                Team AURORA is dedicated to pushing the boundaries of rover technology
-                through innovative design and engineering. Our mission is to develop
-                cutting-edge rovers capable of exploring challenging terrains and
-                competing at the highest level in international competitions.
+                Team AURORA is dedicated to pushing the boundaries of rover
+                technology through innovative design and engineering. Our
+                mission is to develop cutting-edge rovers capable of exploring
+                challenging terrains and competing at the highest level in
+                international competitions.
               </p>
             </div>
             <div className="card">
