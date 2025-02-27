@@ -1,15 +1,29 @@
 import { Link } from "react-router-dom";
-import { Rocket } from "lucide-react";
+import { useState, useEffect } from "react";
 import logo from "../assets/aurora_written.png"; // Adjust the path as needed
 
 function Navbar() {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <nav className="fixed w-full z-50 border-b border-gray-800 h-20">
+    <nav
+      className={`fixed w-full z-50 border-b border-gray-800 h-20 transition-all duration-300 ${
+        scrolled ? "bg-black bg-opacity-70 backdrop-blur-md" : "bg-transparent"
+      }`}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <Link to="/" className="flex items-center space-x-2">
-            <img src={logo} alt="Aurora Logo" className="h-12" />{" "}
-            {/* Increased size */}
+            <img src={logo} alt="Aurora Logo" className="h-12" />
           </Link>
 
           <div className="flex space-x-6 text-white text-lg">
