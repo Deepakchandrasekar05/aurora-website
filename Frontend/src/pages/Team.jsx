@@ -78,7 +78,7 @@ function Team() {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h1 className="text-5xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-[rgba(171,132,98,0.8)] to-[rgba(255,255,255,0.9)]">
+            <h1 className="text-4xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-[rgba(171,132,98,1)] to-white">
               Our Team
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -110,7 +110,7 @@ function Team() {
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.5, delay: idx * 0.05 }}
-                      className="card group p-6 bg-gray-800 rounded-lg text-center hover:bg-gradient-to-r from-[rgba(171,132,98,0.5)] to-[rgba(255,255,255,0.8)]"
+                      className="card group p-6 bg-gray-800 rounded-lg text-center hover:bg-gradient-to-r from-[rgba(19,22,52,1)] to-[rgba(255,255,255,0.8)]"
                     >
                       <div className="w-full h-32 bg-gray-600 rounded-lg mb-4 flex items-center justify-center">
                         <span className="text-gray-300 font-medium">Image Coming Soon</span>

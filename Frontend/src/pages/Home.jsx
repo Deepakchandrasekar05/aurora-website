@@ -66,12 +66,17 @@ function Home() {
                 international competitions.
               </p>
             </div>
-            <div className="card">
-              <img
-                src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80"
-                alt="Rover Design"
-                className="rounded-lg w-full"
-              />
+
+            {/* Divider and Image Card */}
+            <div className="relative flex items-center">
+              <div className="hidden md:block w-1 h-full bg-gradient-to-b from-[rgba(171,132,98,1)] to-transparent"></div>
+              <div className="ml-6">
+                <img
+                  src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80"
+                  alt="Rover Design"
+                  className="rounded-lg w-full shadow-lg"
+                />
+              </div>
             </div>
           </motion.div>
         </div>
@@ -87,13 +92,18 @@ function Home() {
             viewport={{ once: true }}
             className="grid md:grid-cols-2 gap-12 items-center"
           >
-            <div className="card">
-              <img
-                src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&q=80"
-                alt="Team Working"
-                className="rounded-lg w-full"
-              />
+            {/* Divider and Image Card */}
+            <div className="relative flex items-center">
+              <div className="hidden md:block w-1 h-full bg-gradient-to-b from-[rgba(171,132,98,1)] to-transparent"></div>
+              <div className="mr-6">
+                <img
+                  src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&q=80"
+                  alt="Team Working"
+                  className="rounded-lg w-full shadow-lg"
+                />
+              </div>
             </div>
+
             <div>
               <h2 className="text-4xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-[rgba(171,132,98,1)] to-white">
                 About Us
@@ -134,12 +144,17 @@ function Home() {
                 groundbreaking solutions in robotics and automation.
               </p>
             </div>
-            <div className="card">
-              <img
-                src="https://images.unsplash.com/photo-1517148815978-75f6acaaf32c?auto=format&fit=crop&q=80"
-                alt="IRC Competition"
-                className="rounded-lg w-full"
-              />
+
+            {/* Divider and Image Card */}
+            <div className="relative flex items-center">
+              <div className="hidden md:block w-1 h-full bg-gradient-to-b from-[rgba(171,132,98,1)] to-transparent"></div>
+              <div className="ml-6">
+                <img
+                  src="https://images.unsplash.com/photo-1517148815978-75f6acaaf32c?auto=format&fit=crop&q=80"
+                  alt="IRC Competition"
+                  className="rounded-lg w-full shadow-lg"
+                />
+              </div>
             </div>
           </motion.div>
         </div>
