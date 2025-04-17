@@ -4,14 +4,14 @@ import bg from "../assets/home_img.png";
 
 function Home() {
   const scrollToContent = () => {
-      setTimeout(() => {
-        const section = document.getElementById("mission-section");
-        if (section) {
-          section.scrollIntoView({ behavior: "smooth", block: "start" });
-        }
-      }, 100); // Small delay
-    };
-  
+    setTimeout(() => {
+      const section = document.getElementById("mission-section");
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }, 100); // Small delay
+  };
+
   return (
     <div className="relative">
       {/* Hero Section */}
@@ -24,12 +24,12 @@ function Home() {
           />
         </div>
 
-        <div className="relative z-10 text-left px-4 max-w-3xl pl-20 ml-[300px]">
+        <div className="relative z-10 text-left px-4 md:px-8 max-w-3xl pl-6 md:pl-12 ml-0 md:ml-[300px]">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-6xl md:text-7xl font-light mb-6"
+            className="text-5xl md:text-7xl font-light mb-6"
           >
             Team Aurora
           </motion.h1>
@@ -37,13 +37,13 @@ function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl md:text-2xl text-gray-300 max-w-xl"
+            className="text-lg md:text-2xl text-gray-300 max-w-xl"
           >
             Pushing the boundaries of rover technology and exploration
           </motion.p>
         </div>
 
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 1 }}
@@ -53,11 +53,10 @@ function Home() {
         >
           <ChevronDown className="w-8 h-8 animate-bounce text-white" />
         </motion.div>
-
       </section>
 
       {/* Mission Section */}
-      <section className="py-20 px-4">
+      <section id="mission-section" className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -163,7 +162,7 @@ function Home() {
               <div className="ml-6">
                 <img
                   src="https://images.unsplash.com/photo-1517148815978-75f6acaaf32c?auto=format&fit=crop&q=80"
-                  alt="IRC Competition"
+                  alt="IRC Competition" 
                   className="rounded-lg w-full shadow-lg"
                 />
               </div>
