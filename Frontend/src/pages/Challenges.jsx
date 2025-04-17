@@ -1,9 +1,11 @@
 import { motion } from 'framer-motion';
 import { Calendar, MapPin } from 'lucide-react';
+
 import IRC_logo from "../assets/IRC_logo.png";
 import ERC_logo from "../assets/ERC_logo.png";
 import URC_logo from "../assets/URC_logo.png";
 import bg from "../assets/galaxy.png";
+
 
 
 const challenges = [
@@ -19,19 +21,28 @@ const challenges = [
     date: "September, 2024",
     location: "Kielce, Poland",
     description: "Europe's premier rover challenge focusing on autonomous navigation.",
+
     image: ERC_logo
+
+    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80"
+
   },
   {
     title: "University Rover Challenge 2023",
     date: "June, 2023",
     location: "Hanksville, Utah, USA",
     description: "An annual competition where teams design and build the next generation of Mars rovers.",
+
     image: URC_logo
+
+    image: "https://images.unsplash.com/photo-1502672023488-70e25813eb80?auto=format&fit=crop&q=80"
+
   }
 ];
 
 function Challenges() {
   return (
+
     <div
       className="pt-16 team-container min-h-screen bg-contain bg-center relative"
       style={{
@@ -41,6 +52,10 @@ function Challenges() {
     <div className="absolute inset-0 bg-black bg-opacity-60"></div>
     <div className="pt-16 relative">
       <section className="py-10 px-4"> 
+
+    <div className="pt-16 relative">
+      <section className="py-20 px-4">
+
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

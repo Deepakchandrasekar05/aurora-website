@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
+
 import Tharakeshwaran from "../assets/team/Tharakeshwaran.jpg";
 import Abishek from "../assets/team/Abishek.jpg";
 import Aksheta from "../assets/team/Aksheta.jpg";
@@ -90,6 +91,56 @@ const subsystems = [
       { name: "Abishek M", imageUrl: Abishek },
       { name: "Dousik M", imageUrl: Dousik },
       { name: "Sri Harini", imageUrl: SriHarini }
+
+
+const subsystems = [
+  {
+    name: "Mechanical",
+    members: [
+      "Ram Viknesh", "John Doe", "Jane Smith", "Alice Brown", "Bob Johnson",
+      "Charlie Davis", "David Wilson", "Emma Thomas", "Frank White", "Grace Lewis"
+    ]
+  },
+  {
+    name: "Software",
+    members: [
+      "Marcus Rodriguez", "Liam Martinez", "Sophia Anderson", "Mason Taylor", "Olivia Harris",
+      "Ethan Clark", "Ava Walker", "James Hall", "Isabella Allen", "Benjamin Young"
+    ]
+  },
+  {
+    name: "Electrical",
+    members: [
+      "Emily Parker", "Michael King", "Abigail Wright", "Daniel Scott", "Madison Green",
+      "Lucas Baker", "Ella Adams", "Alexander Nelson", "Chloe Carter", "Samuel Mitchell"
+    ]
+  },
+  {
+    name: "Science",
+    members: [
+      "Henry Perez", "Lillian Roberts", "Jack Turner", "Zoe Phillips", "Nathan Campbell",
+      "Harper Evans", "Sebastian Edwards", "Evelyn Collins", "Owen Stewart", "Scarlett Morris"
+    ]
+  },
+  {
+    name: "Systems Integration",
+    members: [
+      "William Murphy", "Victoria Cook", "Joseph Rivera", "Aria Flores", "Gabriel Reed",
+      "Hannah Diaz", "Carter Brooks", "Penelope Jenkins", "Luke Rogers", "Nova Foster"
+    ]
+  },
+  {
+    name: "Autonomy",
+    members: [
+      "Dylan Gonzales", "Violet Simmons", "Caleb Bryant", "Aurora Russell", "Julian Butler",
+      "Layla Peterson", "Eli Perry", "Natalie Cooper", "Christopher Howard", "Savannah Ward"
+    ]
+  },
+  {
+    name: "Operations",
+    members: [
+      "Levi Torres", "Brooklyn Bell", "Isaac Bailey", "Lucy Murphy", "Maverick Richardson",
+      "Stella Cox", "Nicholas Ramirez", "Paisley Sanders", "Nathaniel Price", "Everly Griffin"
     ]
   }
 ];
@@ -145,6 +196,7 @@ function Team() {
               </button>
 
               {visibleSubsystem === subsystem.name && (
+
                 <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-6">
                   {subsystem.members.map((member, idx) => (
                     <motion.div 
@@ -163,6 +215,23 @@ function Team() {
                       </div>
                       <h3 className="text-xl font-semibold text-white">{member.name}</h3>
                       <p className="text-[rgba(171,132,98,0.6)]">{subsystem.name} Developer</p>
+                    </motion.div>
+                  ))}
+
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-6">
+                  {subsystem.members.map((member, idx) => (
+                    <motion.div
+                      key={member}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.5, delay: idx * 0.05 }}
+                      className="card group p-6 bg-gray-800 rounded-lg text-center hover:bg-gradient-to-r from-[rgba(19,22,52,1)] to-[rgba(255,255,255,0.8)]"
+                    >
+                      <div className="w-full h-32 bg-gray-600 rounded-lg mb-4 flex items-center justify-center">
+                        <span className="text-gray-300 font-medium">Image Coming Soon</span>
+                      </div>
+                      <h3 className="text-xl font-semibold text-white">{member}</h3>
+                      <p className="text-[rgba(171,132,98,0.6)]">{subsystem.name} Engineer</p>
                     </motion.div>
                   ))}
 
