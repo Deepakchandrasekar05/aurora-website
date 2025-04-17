@@ -30,7 +30,6 @@ const sponsors = [
 
 function Sponsors() {
   return (
-
     <div
       className="pt-16 team-container min-h-screen bg-contain bg-center relative"
       style={{
@@ -40,10 +39,6 @@ function Sponsors() {
     <div className="absolute inset-0 bg-black bg-opacity-60"></div>
     <div className="pt-16 relative">
       <section className="py-10 px-4">
-
-    <div className="pt-16 relative">
-      <section className="py-20 px-4">
-
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -70,14 +65,10 @@ function Sponsors() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.2 }}
-
                 className="card text-center bg-gray-900/50 w-100 mx-auto p-6 rounded-xl border border-gray-700 rounded-lg shadow-lg bg-gray-800
                            transition duration-500 ease-in-out transform
                            hover:bg-gradient-to-r from-[rgba(171,132,98,0.5)] to-[rgba(246, 147, 0, 0.02)]
                            hover:scale-105"
-
-                className="card text-center bg-gray-900/50 p-6 rounded-xl border border-gray-700 shadow-lg"
-
               >
                 <div className="h-40 mb-4 overflow-hidden rounded-lg">
                   <img
@@ -107,11 +98,7 @@ function Sponsors() {
               Join us in pushing the boundaries of rover technology. Your support can help
               shape the future of space exploration.
             </p>
-
             <button className="px-8 py-3 bg-[rgba(171,132,98,0.5)] rounded-full text-white font-semibold hover:opacity-90 transition-opacity shadow-lg">
-
-            <button className="px-8 py-3 bg-[#131634] rounded-full text-white font-semibold hover:opacity-90 transition-opacity shadow-lg">
-
               Contact Us
             </button>
           </motion.div>

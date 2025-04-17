@@ -24,20 +24,12 @@ function Home() {
           />
         </div>
 
-
         <div className="relative z-10 text-left px-4 md:px-8 max-w-3xl pl-6 md:pl-12 ml-0 md:ml-[300px]">
-
-        <div className="relative z-10 text-left px-4 max-w-3xl pl-20 ml-[300px]">
-
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-
             className="text-5xl md:text-7xl font-light mb-6"
-
-            className="text-6xl md:text-7xl font-light mb-6"
-
           >
             Team Aurora
           </motion.h1>
@@ -45,11 +37,7 @@ function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-
             className="text-lg md:text-2xl text-gray-300 max-w-xl"
-
-            className="text-xl md:text-2xl text-gray-300 max-w-xl"
-
           >
             Pushing the boundaries of rover technology and exploration
           </motion.p>
@@ -109,47 +97,6 @@ function Home() {
       <section className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
           <motion.div
-
-
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="grid md:grid-cols-2 gap-12 items-center"
-          >
-            <div>
-              <h2 className="text-4xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-[rgba(171,132,98,1)] to-white">
-                Our Mission
-              </h2>
-              <p className="text-gray-300 text-lg leading-relaxed">
-                Team AURORA is dedicated to pushing the boundaries of rover
-                technology through innovative design and engineering. Our
-                mission is to develop cutting-edge rovers capable of exploring
-                challenging terrains and competing at the highest level in
-                international competitions.
-              </p>
-            </div>
-
-            {/* Divider and Image Card */}
-            <div className="relative flex items-center">
-              <div className="hidden md:block w-1 h-full bg-gradient-to-b from-[rgba(171,132,98,1)] to-transparent"></div>
-              <div className="ml-6">
-                <img
-                  src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80"
-                  alt="Rover Design"
-                  className="rounded-lg w-full shadow-lg"
-                />
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* About Us Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-6xl mx-auto">
-          <motion.div
-
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -215,11 +162,7 @@ function Home() {
               <div className="ml-6">
                 <img
                   src="https://images.unsplash.com/photo-1517148815978-75f6acaaf32c?auto=format&fit=crop&q=80"
-
                   alt="IRC Competition" 
-
-                  alt="IRC Competition"
-
                   className="rounded-lg w-full shadow-lg"
                 />
               </div>
