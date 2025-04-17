@@ -1,3 +1,4 @@
+// Challenge Data
 import { motion } from 'framer-motion';
 import { Calendar, MapPin } from 'lucide-react';
 import IRC_logo from "../assets/IRC_logo.png";
@@ -116,32 +117,34 @@ function Challenges() {
       className="relative min-h-screen overflow-x-hidden"
       style={{
         backgroundImage: `url(${bg})`,
-        backgroundSize: 'cover',
-        backgroundAttachment: 'fixed',
-        backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'center',
+        backgroundSize: "cover",
+        backgroundAttachment: "fixed",
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "center",
       }}
     >
       <div className="absolute inset-0 bg-black bg-opacity-70"></div>
 
       <div className="relative z-10 pt-20 px-4 md:px-8 pb-12">
+        {/* Page Title */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="text-center mb-12"
         >
-          <h1
-            className="text-4xl sm:text-5xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-white leading-tight"
-          >
+           <h1 className="text-5xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r 
+              from-[rgba(171,132,98,1)] to-white block leading-[1.2] pb-2"
+            >
             Challenges
           </h1>
           <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto">
-            A journey of excellence through international and national-level competitions where
-            Team AURORA displayed its robotics expertise.
+            A journey of excellence through international and national-level
+            competitions where Team AURORA displayed its robotics expertise.
           </p>
         </motion.div>
 
+        {/* Challenge Cards */}
         <div className="space-y-10">
           {sortedChallenges.map((challenge, index) => (
             <motion.div
@@ -149,8 +152,11 @@ function Challenges() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="flex flex-col md:flex-row gap-6 md:gap-10 max-w-5xl mx-auto rounded-2xl shadow-lg bg-gray-800/80 backdrop-blur-md transition-transform duration-500 hover:scale-105 border border-yellow-400/20"
+              className="flex flex-col md:flex-row gap-6 md:gap-10 max-w-4xl mx-auto rounded-2xl shadow-xl 
+              bg-gray-800/80 backdrop-blur-md border border-yellow-400/30 transition-transform 
+              duration-500 hover:scale-105 hover:shadow-yellow-300/20"
             >
+              {/* Image Section */}
               <div className="md:w-1/2 w-full flex justify-center items-center p-4">
                 <img
                   src={challenge.image}
@@ -158,17 +164,19 @@ function Challenges() {
                   className="w-full h-64 object-contain rounded-xl"
                 />
               </div>
+
+              {/* Content Section */}
               <div className="md:w-1/2 w-full flex flex-col justify-center p-4 space-y-3">
-                <h3 className="text-2xl font-bold text-white">{challenge.title}</h3>
+                <h3 className="text-3xl font-bold text-white">{challenge.title}</h3>
                 <div className="flex items-center space-x-2 text-yellow-400 text-sm">
-                  <Calendar className="w-4 h-4" />
-                  <span>{challenge.date}</span>
+                  <Calendar className="w-5 h-5" />
+                  <span className="text-lg">{challenge.date}</span>
                 </div>
                 <div className="flex items-center space-x-2 text-yellow-400 text-sm">
-                  <MapPin className="w-4 h-4" />
-                  <span>{challenge.location}</span>
+                  <MapPin className="w-5 h-5" />
+                  <span className="text-lg">{challenge.location}</span>
                 </div>
-                <p className="text-gray-300 text-sm sm:text-base">{challenge.description}</p>
+                <p className="text-gray-300 text-base">{challenge.description}</p>
               </div>
             </motion.div>
           ))}

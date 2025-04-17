@@ -1,6 +1,10 @@
 import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import bg from "../assets/home_img.png";
+import gp from "../assets/gp_goa.jpg";
+import clg from "../assets/gp_goa2.jpg";
+import rover from "../assets/rover.jpg";
+import logo2 from "../assets/rover_t.png";
 
 function Home() {
   const scrollToContent = () => {
@@ -9,13 +13,13 @@ function Home() {
       if (section) {
         section.scrollIntoView({ behavior: "smooth", block: "start" });
       }
-    }, 100); // Small delay
+    }, 100);
   };
 
   return (
     <div className="relative">
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-start">
+      <section className="relative h-screen flex items-center justify-center px-6 md:px-20">
         <div className="absolute inset-0">
           <img
             src={bg}
@@ -24,32 +28,72 @@ function Home() {
           />
         </div>
 
-        <div className="relative z-10 text-left px-4 md:px-8 max-w-3xl pl-6 md:pl-12 ml-0 md:ml-[300px]">
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-5xl md:text-7xl font-light mb-6"
-          >
-            Team Aurora
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-lg md:text-2xl text-gray-300 max-w-xl"
-          >
-            Pushing the boundaries of rover technology and exploration
-          </motion.p>
+        {/* Centered Content */}
+        <div className="relative z-10 flex flex-col items-center">
+          <div className="flex flex-col md:flex-row items-center gap-x-24 gap-y-10">
+            {/* Text */}
+            <div className="text-center md:text-left">
+              <motion.h1
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                className="text-5xl md:text-7xl font-light mb-6"
+              >
+                Team Aurora
+              </motion.h1>
+              <br />
+              <br />
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                className="text-lg md:text-xl text-gray-200 max-w-xl"
+              >
+                We are passionate group of students pushing the limits of rover
+                technology and space exploration. We continue to redefine
+                excellence in autonomous robotics.
+              </motion.p>
+            </div>
+
+            {/* Rover Image with hover animation */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 1, delay: 0.1 }}
+              className="mt-10 md:mt-0"
+            >
+              <motion.img
+                src={logo2}
+                alt="Rover Logo"
+                className="w-48 h-48 md:w-64 md:h-64 object-contain shadow-xl"
+                animate={{
+                  scale: [1, 1.05, 1], // subtle scaling to simulate moving forward and back
+                  y: [0, -5, 0], // optional slight lift
+                }}
+                transition={{
+                  duration: 5, // slow animation
+                  repeat: Infinity,
+                  repeatType: "loop",
+                  ease: "easeInOut",
+                }}
+                whileHover={{
+                  scale: 1.1,
+                  rotate: 2,
+                  x: -20,
+                }}
+                whileTap={{ scale: 0.95 }}
+              />
+            </motion.div>
+          </div>
         </div>
 
+        {/* Down Arrow */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 1 }}
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 cursor-pointer"
+          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 cursor-pointer z-20"
           onClick={scrollToContent}
-          style={{ pointerEvents: "auto" }} // Ensure clickable behavior
         >
           <ChevronDown className="w-8 h-8 animate-bounce text-white" />
         </motion.div>
@@ -77,13 +121,11 @@ function Home() {
                 international competitions.
               </p>
             </div>
-
-            {/* Divider and Image Card */}
             <div className="relative flex items-center">
               <div className="hidden md:block w-1 h-full bg-gradient-to-b from-[rgba(171,132,98,1)] to-transparent"></div>
               <div className="ml-6">
                 <img
-                  src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80"
+                  src={rover}
                   alt="Rover Design"
                   className="rounded-lg w-full shadow-lg"
                 />
@@ -103,18 +145,16 @@ function Home() {
             viewport={{ once: true }}
             className="grid md:grid-cols-2 gap-12 items-center"
           >
-            {/* Divider and Image Card */}
             <div className="relative flex items-center">
               <div className="hidden md:block w-1 h-full bg-gradient-to-b from-[rgba(171,132,98,1)] to-transparent"></div>
               <div className="mr-6">
                 <img
-                  src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&q=80"
+                  src={clg}
                   alt="Team Working"
                   className="rounded-lg w-full shadow-lg"
                 />
               </div>
             </div>
-
             <div>
               <h2 className="text-4xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-[rgba(171,132,98,1)] to-white">
                 About Us
@@ -155,14 +195,12 @@ function Home() {
                 groundbreaking solutions in robotics and automation.
               </p>
             </div>
-
-            {/* Divider and Image Card */}
             <div className="relative flex items-center">
               <div className="hidden md:block w-1 h-full bg-gradient-to-b from-[rgba(171,132,98,1)] to-transparent"></div>
               <div className="ml-6">
                 <img
-                  src="https://images.unsplash.com/photo-1517148815978-75f6acaaf32c?auto=format&fit=crop&q=80"
-                  alt="IRC Competition" 
+                  src={gp}
+                  alt="IRC Competition"
                   className="rounded-lg w-full shadow-lg"
                 />
               </div>
