@@ -1,6 +1,98 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 
+import Tharakeshwaran from "../assets/team/Tharakeshwaran.jpg";
+import Abishek from "../assets/team/Abishek.jpg";
+import Aksheta from "../assets/team/Aksheta.jpg";
+import Anandh from "../assets/team/Anandh.jpg";
+import Ashwin from "../assets/team/Ashwin.jpg";
+import Barath from "../assets/team/Barath.jpg";
+import Bavishyaa from "../assets/team/Bavishyaa.jpg";
+import Deepak from "../assets/team/Deepak.jpg";
+import Dousik from "../assets/team/Dousik.jpg";
+import Gautham from "../assets/team/Gautham.jpg";
+import Gopinath from "../assets/team/Gopinath.jpg";
+import Harikrishna from "../assets/team/Harikrishna.jpg";
+import Harshaa from "../assets/team/Harshaa.jpg";
+import Lakshana from "../assets/team/Lakshana.jpg";
+import Lenin from "../assets/team/Lenin.jpg";
+import Mahadev from "../assets/team/Mahadev.jpg";
+import Modhika from "../assets/team/Modhika.jpg";
+//import Rishikeesh from "../assets/team/Rishikeesh.jpg";
+import Roshini from "../assets/team/Roshini.jpg";
+import Sandeep from "../assets/team/Sandeep.jpg";
+import Sania from "../assets/team/Sania.jpg";
+import Shaswathra from "../assets/team/Shaswathra.jpg";
+import Shivani from "../assets/team/Shivani.jpg";
+import SriHarini from "../assets/team/SriHarini.jpg";
+import SriHarish from "../assets/team/SriHarish.jpg";
+import Thrisha from "../assets/team/Thrisha.jpg";
+import VarshaRD from "../assets/team/VarshaRD.jpg";
+import VarshaRS from "../assets/team/VarshaRS.png";
+import Vismitha from "../assets/team/Vismitha.jpg";
+import Waafiq from "../assets/team/Waafiq.jpeg";
+
+const subsystems = [
+  {
+    name: "Mechanical Subsytem",
+    members: [
+      { name: "Tharakeshwaran", imageUrl: Tharakeshwaran },
+    ]
+  },
+  {
+    name: "Electrical Subsystem",
+    members: [
+      { name: "Harshaa", imageUrl: Harshaa },
+      { name: "Leninsingharam", imageUrl: Lenin },
+      { name: "Barath Krishna", imageUrl: Barath },
+      { name: "Anandh", imageUrl: Anandh },
+      { name: "Mahadev", imageUrl: Mahadev }
+    ]
+  },
+  {
+    name: "Science and Sensors Subsystem",
+    members: [
+      { name: "Varsha RD", imageUrl: VarshaRD },
+      { name: "Varsha RS", imageUrl: VarshaRS },
+      { name: "Aksheta", imageUrl: Aksheta },
+      { name: "Sania Franklin", imageUrl: Sania },
+      { name: "Vismitha", imageUrl: Vismitha },
+      { name: "Shaswathra", imageUrl: Shaswathra },
+      { name: "Sri Harish", imageUrl: SriHarish },
+      { name: "Bavishyaa", imageUrl: Bavishyaa },
+      { name: "Modhika", imageUrl: Modhika },
+      { name: "Thrisha", imageUrl: Thrisha },
+      { name: "Gopinath", imageUrl: Gopinath }
+    ]
+  },
+  {
+    name: "ROS subsystem",
+    members: [
+      { name: "Shivani Varsha", imageUrl: Shivani },
+      { name: "Ashwin M", imageUrl: Ashwin },
+      { name: "Waafiq Raakin", imageUrl: Waafiq },
+      { name: "Roshini Priya", imageUrl: Roshini }
+    ]
+  },
+  {
+    name: "Autonomous Subsytem",
+    members: [
+      { name: "Sandeep S", imageUrl: Sandeep },
+      { name: "Harikrishna S", imageUrl: Harikrishna },
+      {name: "Rishikeesh", imageUrl: "/src/assets/team/Rishikeesh.jpg"},
+      { name: "Gautham Prasad", imageUrl: Gautham },
+      { name: "Deepak Chandrasekar", imageUrl: Deepak },
+      { name: "Lakshana G", imageUrl: Lakshana }
+    ]
+  },
+  {
+    name: "Communication Subsystem",
+    members: [
+      { name: "Abishek M", imageUrl: Abishek },
+      { name: "Dousik M", imageUrl: Dousik },
+      { name: "Sri Harini", imageUrl: SriHarini }
+
+
 const subsystems = [
   {
     name: "Mechanical",
@@ -53,6 +145,7 @@ const subsystems = [
   }
 ];
 
+
 function Team() {
   const [visibleSubsystem, setVisibleSubsystem] = useState(null);
 
@@ -103,6 +196,28 @@ function Team() {
               </button>
 
               {visibleSubsystem === subsystem.name && (
+
+                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-6">
+                  {subsystem.members.map((member, idx) => (
+                    <motion.div 
+                      key={`${subsystem.name}-${idx}`}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.5, delay: idx * 0.05 }}
+                      className="card group p-6 bg-gray-800 rounded-lg text-center hover:bg-gradient-to-r from-[rgba(19,22,52,1)] to-[rgba(255, 255, 255, 0.64)]"
+                    >
+                      <div className="w-full h-60 bg-gray-600 rounded-lg mb-4 flex items-center justify-center overflow-hidden">
+                        <img 
+                          src={member.imageUrl} 
+                          alt={member.name} 
+                          className="w-full h-full object-cover rounded-lg"
+                        />
+                      </div>
+                      <h3 className="text-xl font-semibold text-white">{member.name}</h3>
+                      <p className="text-[rgba(171,132,98,0.6)]">{subsystem.name} Developer</p>
+                    </motion.div>
+                  ))}
+
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-6">
                   {subsystem.members.map((member, idx) => (
                     <motion.div
@@ -119,6 +234,7 @@ function Team() {
                       <p className="text-[rgba(171,132,98,0.6)]">{subsystem.name} Engineer</p>
                     </motion.div>
                   ))}
+
                 </div>
               )}
             </motion.div>

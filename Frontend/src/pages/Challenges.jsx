@@ -1,34 +1,61 @@
 import { motion } from 'framer-motion';
 import { Calendar, MapPin } from 'lucide-react';
 
+import IRC_logo from "../assets/IRC_logo.png";
+import ERC_logo from "../assets/ERC_logo.png";
+import URC_logo from "../assets/URC_logo.png";
+import bg from "../assets/galaxy.png";
+
+
+
 const challenges = [
   {
     title: "International Rover Challenge 2024",
     date: "January, 2024",
     location: "BITS Pilani GOA Campus, India",
     description: "A prestigious competition testing rover capabilities in Mars-like terrain.",
-    image: "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&q=80"
+    image: IRC_logo
   },
   {
     title: "European Rover Challenge 2024",
     date: "September, 2024",
     location: "Kielce, Poland",
     description: "Europe's premier rover challenge focusing on autonomous navigation.",
+
+    image: ERC_logo
+
     image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80"
+
   },
   {
     title: "University Rover Challenge 2023",
     date: "June, 2023",
     location: "Hanksville, Utah, USA",
     description: "An annual competition where teams design and build the next generation of Mars rovers.",
+
+    image: URC_logo
+
     image: "https://images.unsplash.com/photo-1502672023488-70e25813eb80?auto=format&fit=crop&q=80"
+
   }
 ];
 
 function Challenges() {
   return (
+
+    <div
+      className="pt-16 team-container min-h-screen bg-contain bg-center relative"
+      style={{
+        backgroundImage: `url(${bg})`,
+      }}
+    >
+    <div className="absolute inset-0 bg-black bg-opacity-60"></div>
+    <div className="pt-16 relative">
+      <section className="py-10 px-4"> 
+
     <div className="pt-16 relative">
       <section className="py-20 px-4">
+
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -56,13 +83,16 @@ function Challenges() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.2 }}
-                className="card flex flex-col md:flex-row gap-8"
+                className="card flex w-100 md:flex-row gap-8 max-w-[1000px] mx-auto rounded-lg shadow-lg bg-gray-800
+                           transition duration-500 ease-in-out transform
+                           hover:bg-gradient-to-r from-[rgba(171,132,98,0.5)] to-[rgba(246, 147, 0, 0.02)]
+                           hover:scale-105"
               >
-                <div className="md:w-1/2">
+                <div className="md:w-1/2 flex justify-center">
                   <img
                     src={challenge.image}
                     alt={challenge.title}
-                    className="w-full h-64 object-cover rounded-lg"
+                    className="w-80 h-64 object-cover rounded-lg "
                   />
                 </div>
                 <div className="md:w-1/2 space-y-4">
@@ -82,6 +112,7 @@ function Challenges() {
           </div>
         </div>
       </section>
+    </div>
     </div>
   );
 }
