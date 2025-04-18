@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import Team from './pages/Team';
 import Challenges from './pages/Challenges';
 import Sponsors from './pages/Sponsors';
+import Updates from './pages/Updates';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route path="/home" element={<Home />} />
           <Route path="/" element={<Home />} />
           <Route path="/team" element={<Team />} />
+          <Route path="/updates" element={<Updates />} />
           <Route path="/challenges" element={<Challenges />} />
           <Route path="/sponsors" element={<Sponsors />} />
         </Routes>

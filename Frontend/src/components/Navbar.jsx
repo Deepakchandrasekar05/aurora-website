@@ -32,7 +32,7 @@ function Navbar() {
 
           {/* Desktop Links */}
           <div className="hidden md:flex space-x-6 text-white text-lg">
-            {["Home", "Team", "Challenges", "Sponsors"].map((item, index) => (
+            {["Home", "Team","Updates", "Challenges", "Sponsors"].map((item, index) => (
               <Link
                 key={index}
                 to={`/${item.toLowerCase()}`}
@@ -60,7 +60,7 @@ function Navbar() {
         {/* Mobile Dropdown Menu */}
         {menuOpen && (
           <div className="md:hidden mt-2 space-y-4 px-2 pb-4 text-white bg-black bg-opacity-80 rounded-lg shadow-md">
-            {["Home", "Team", "Challenges", "Sponsors"].map((item, index) => (
+            {["Home", "Team","Updates", "Challenges", "Sponsors"].map((item, index) => (
               <Link
                 key={index}
                 to={`/${item.toLowerCase()}`}
