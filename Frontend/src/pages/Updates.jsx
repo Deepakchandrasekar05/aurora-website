@@ -7,14 +7,6 @@ import bg from "../assets/home_img.png";
 
 const works = [
   {
-    title: "PCB Prodigy @ Yukta 2025",
-    date: "March, 2025",
-    location: "PSG Institute of Technology and Applied Research",
-    description:
-      "During Yukta 2025, Team Aurora hosted the “PCB Prodigy” workshop, introducing participants to PCB design fundamentals, real-time simulation, and soldering techniques through a hands-on approach.",
-    image: workshopImage,
-  },
-  {
     title: "Recruitment Workshops",
     date: "April to July",
     location: "Campus and Online",
@@ -22,6 +14,15 @@ const works = [
       "To onboard fresh talent and cultivate innovation, we regularly conduct recruitment workshops. These sessions provide hands-on experience in embedded systems, robotics, and collaborative engineering.",
     image: recruitImage,
   },
+  {
+    title: "PCB Prodigy @ Yukta 2025",
+    date: "March, 2025",
+    location: "PSG Institute of Technology and Applied Research",
+    description:
+      "During Yukta 2025, Team Aurora hosted the “PCB Prodigy” workshop, introducing participants to PCB design fundamentals, real-time simulation, and soldering techniques through a hands-on approach.",
+    image: workshopImage,
+  },
+  
 ];
 
 function Updates() {

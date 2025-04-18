@@ -148,7 +148,7 @@ function Team() {
             className="text-center mb-16"
           >
             <h1 className="text-4xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-[rgba(171,132,98,1)] to-white">
-              Our Team
+              Team 6.0
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Meet the brilliant minds behind Team AURORA. Our team is divided

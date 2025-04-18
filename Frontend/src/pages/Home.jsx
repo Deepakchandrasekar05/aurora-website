@@ -5,6 +5,7 @@ import gp from "../assets/gp_goa.jpg";
 import clg from "../assets/gp_goa2.jpg";
 import rover from "../assets/rover.jpg";
 import logo2 from "../assets/rover_t.png";
+import bgVideo from "../assets/aurora.mp4";
 
 function Home() {
   const scrollToContent = () => {
@@ -21,18 +22,22 @@ function Home() {
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center px-6 md:px-20">
         <div className="absolute inset-0">
-          <img
-            src={bg}
-            alt="Space Background"
+          <video
+            src={bgVideo}
+            autoPlay
+            loop
+            muted
+            playsInline
             className="w-full h-full object-cover opacity-40"
           />
         </div>
-
+        
         {/* Centered Content */}
         <div className="relative z-10 flex flex-col items-center">
           <div className="flex flex-col md:flex-row items-center gap-x-24 gap-y-10">
             {/* Text */}
-            <div className="text-center md:text-left">
+            <div className="text-center md:text-left mt-[30px]">
+              
               <motion.h1
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -66,20 +71,11 @@ function Home() {
                 src={logo2}
                 alt="Rover Logo"
                 className="w-48 h-48 md:w-64 md:h-64 object-contain shadow-xl"
-                animate={{
-                  scale: [1, 1.05, 1], // subtle scaling to simulate moving forward and back
-                  y: [0, -5, 0], // optional slight lift
-                }}
-                transition={{
-                  duration: 5, // slow animation
-                  repeat: Infinity,
-                  repeatType: "loop",
-                  ease: "easeInOut",
-                }}
                 whileHover={{
                   scale: 1.1,
                   rotate: 2,
                   x: -20,
+                  y: -5, // simulate slight lift on hover
                 }}
                 whileTap={{ scale: 0.95 }}
               />
